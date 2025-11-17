@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Bahrul</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .tech-font { font-family: 'Roboto Mono', monospace; }
+    .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+    .language-toggle { position: relative; width: 60px; height: 30px; border-radius: 15px; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; }
+    .language-toggle.active { background: #3b82f6; }
+    .toggle-circle { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: white; transition: all 0.3s ease; }
+    .language-toggle.active .toggle-circle { left: 33px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header with Language Toggle -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold gradient-text tech-font">Bahrul<span class="text-blue-600">| Portfolio</span></h1>
+      <div class="flex items-center gap-8">
+        <nav class="hidden md:flex gap-6" aria-label="Primary">
+          <a href="#about" class="text-gray-700 hover:text-blue-600 transition">Profile</a>
+          <a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
+          <a href="#documentation" class="text-gray-700 hover:text-blue-600 transition">Docs</a>
+          <a href="#certifications" class="text-gray-700 hover:text-blue-600 transition">Certs</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2" aria-label="Language toggle">
+          <span class="text-sm text-gray-500">ID</span>
+          <div class="language-toggle" id="languageToggle" role="switch" aria-checked="false" tabindex="0">
+            <div class="toggle-circle"></div>
+          </div>
+          <span class="text-sm text-gray-500">EN</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="px-6 md:px-20 py-20 md:py-28 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2 order-2 md:order-1">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 tech-font">
+          <span class="gradient-text">Muhamad Bahrul</span>
+          <span class="block text-gray-800">Widad Sauqi</span>
+        </h2>
+        <p class="text-lg mb-6 text-gray-600">Network Engineer & IT Support</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition shadow-md">
+            <i class="fas fa-paper-plane mr-2"></i>Contact Me
+          </a>
+          <a href="https://drive.google.com/file/d/1eDpHIJEAq6DwcaXgI89mqaBDm9y-wTQ-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 rounded-md transition shadow-md">
+            <i class="fas fa-file-alt mr-2"></i>View Resume
+          </a>
+        </div>
+        <div class="mt-8 flex gap-4" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/muhamadbahrulwidadsauqi/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-xl"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/bahrulwd" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 text-xl"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/drullwd" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-pink-600 text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
+        <div class="relative">
+          <img src="Bahrul.jpg" alt="Portrait of Muhamad Bahrul Widad Sauqi" class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-xl" loading="lazy">
+          <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md">
+            <i class="fas fa-network-wired mr-2"></i>IT Enthusiast
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (English) -->
+  <section id="about" class="px-6 md:px-20 py-16 md:py-24 bg-white en-content">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">About Me</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            I'm a graduate of SMK Wikrama Bogor majoring in Computer Network and Telecommunication Engineering (TJKT) with expected graduation in 2025.
+            I completed a 6-month internship at The Highland Park Resort Bogor as an IT Support Staff, where I handled installation surveys, troubleshooting,
+            and maintenance of both hardware and software systems.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Passionate about network infrastructure and system administration, I'm constantly expanding my skills in areas like MikroTik routing,
+            Linux server administration, and network security. My goal is to build a successful career in computer networking and infrastructure.
+          </p>
+        </div>
+        <div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-4">Technical Skills</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Network Configuration</span>
+                  <span class="text-sm text-gray-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Troubleshooting</span>
+                  <span class="text-sm text-gray-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <!-- FIXED: previously 0%, now correctly 80% -->
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Linux Administration</span>
+                  <span class="text-sm text-gray-500">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">MikroTik RouterOS</span>
+                  <span class="text-sm text-gray-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (Indonesian) -->
+  <section id="about-id" class="px-6 md:px-20 py-16 md:py-24 bg-white id-content hidden">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">Tentang Saya</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Saya lulusan SMK Wikrama Bogor jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT) dengan rencana kelulusan tahun 2025.
+            Saya menyelesaikan magang selama 6 bulan di The Highland Park Resort Bogor sebagai Staf IT Support, di mana saya menangani survei instalasi,
+            pemecahan masalah, dan perawatan sistem hardware maupun software.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Bersemangat dalam infrastruktur jaringan dan administrasi sistem, saya terus mengembangkan keterampilan di bidang seperti routing MikroTik,
+            administrasi server Linux, dan keamanan jaringan. Tujuan saya adalah membangun karir yang sukses di bidang jaringan komputer dan infrastruktur.
+          </p>
+        </div>
+        <div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-4">Kemampuan Teknis</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Konfigurasi Jaringan</span>
+                  <span class="text-sm text-gray-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Pemecahan Masalah</span>
+                  <span class="text-sm text-gray-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <!-- DISAMAKAN: label & bar sekarang 80% -->
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Administrasi Linux</span>
+                  <span class="text-sm text-gray-500">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">MikroTik RouterOS</span>
+                  <span class="text-sm text-gray-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section (English) -->
+  <section id="experience" class="px-6 md:px-20 py-20 bg-gray-50 en-content">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">Experience & Projects</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Internship Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-briefcase text-xs"></i>
+                </span>
+                Technical Support
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">INTERNSHIP</span>
+              </h3>
+              <p class="text-blue-600 font-medium mt-1">The Highland Park Resort Bogor</p>
+            </div>
+            <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Jan - Jun 2024</span>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Implemented project to install 13 CCTV units and fiber optic internet network in new glamping area</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Conducted routine CCTV checks and maintenance to ensure optimal system performance</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Operated and maintained OS and software on employee computers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Assembled and troubleshot hardware including PCs, printers, and telephones</span>
+            </li>
+          </ul>
+        </div>
+        <!-- School Project Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-laptop-code text-xs"></i>
+                </span>
+                FTTH Project x NOC
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">SCHOOL PROJECT</span>
+              </h3>
+              <p class="text-blue-600 font-medium mt-1">SMK Wikrama Bogor</p>
+            </div>
+            <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Oct 2024</span>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Installed fiber optic cables across school environment from field area to classrooms</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Configured PPPoE and hotspot servers with QoS settings on MikroTik routers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Monitored network stability and assisted technical teams in troubleshooting</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Technical Staff Card -->
+<div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+  <div class="flex justify-between items-start mb-4">
+    <div>
+      <h3 class="text-xl font-semibold flex items-center gap-2">
+        <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+          <i class="fas fa-briefcase text-xs"></i>
+        </span>
+        Technical Staff
+        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">CONTRACT</span>
+      </h3>
+      <p class="text-blue-600 font-medium mt-1">Bogor CCTV</p>
+    </div>
+    <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Sep - Nov 2025</span>
+  </div>
+  <ul class="space-y-3 text-gray-700">
+    <li class="flex items-start gap-2">
+      <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+      <span>Performed installation of IP-based and analog CCTV systems</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+      <span>Configured DVR/NVR devices according to operational needs</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+      <span>Handled LAN cable pulling and termination (crimping) following installation standards</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+      <span>Adjusted and optimized CCTV camera positions to ensure maximum monitoring quality</span>
+    </li>
+  </ul>
+</div>
+  </section>
+
+  <!-- Experience Section (Indonesian) -->
+  <section id="experience-id" class="px-6 md:px-20 py-20 bg-gray-50 id-content hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">Pengalaman & Proyek</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Internship Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-briefcase text-xs"></i>
+                </span>
+                Technical Support
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">MAGANG</span>
+              </h3>
+              <p class="text-blue-600 font-medium mt-1">The Highland Park Resort Bogor</p>
+            </div>
+            <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Jan - Jun 2024</span>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Mengimplementasikan proyek pemasangan 13 unit CCTV dan jaringan internet fiber optic di area glamping baru</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Melakukan pemeriksaan dan perawatan CCTV rutin untuk memastikan kinerja sistem optimal</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Mengoperasikan dan merawat OS serta software di komputer karyawan</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Merakit dan memecahkan masalah hardware termasuk PC, printer, dan telepon</span>
+            </li>
+          </ul>
+        </div>
+        <!-- School Project Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-laptop-code text-xs"></i>
+                </span>
+                Proyek FTTH x NOC
+                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">PROYEK SEKOLAH</span>
+              </h3>
+              <p class="text-blue-600 font-medium mt-1">SMK Wikrama Bogor</p>
+            </div>
+            <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Okt 2024</span>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Memasang kabel fiber optic di lingkungan sekolah dari area lapangan ke ruang kelas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Mengkonfigurasi server PPPoE dan hotspot dengan pengaturan QoS di router MikroTik</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Memantau stabilitas jaringan dan membantu tim teknis dalam pemecahan masalah</span>
+            </li>
+          </ul>
+        </div>
+         <!-- teknisi -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold flex items-center gap-2">
+                <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                  <i class="fas fa-briefcase text-xs"></i>
+                </span>
+                Staff Teknisi
+
+                <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Kontrak</span> 
+              </h3>
+              <p class="text-blue-600 font-medium mt-1">Bogor CCTV</p> 
+            </div>
+            <span class="text-gray-500 text-sm bg-gray-100 px-2 py-1 rounded">Okt 2024</span>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Melaksanakan instalasi kamera CCTV berbasis IP maupun analog</span> 
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span> Melakukan konfigurasi perangkat DVR/NVR sesuai kebutuhan operasional</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Menangani penarikan serta terminasi (crimping) kabel LAN sesuai standar instalasi</span>
+            </li>
+             <li class="flex items-start gap-2">
+              <span class="text-red-600 mt-1"><i class="fas fa-check-circle"></i></span>
+              <span>Melakukan penyesuaian dan optimalisasi posisi kamera untuk memastikan kualitas pemantauan yang maksimal</span>
+            </li>
+          </ul>
+        </div>
+  </section>
+
+  <!-- Documentation Section -->
+  <section id="documentation" class="px-6 md:px-20 py-20 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 tech-font">Technical Documentation</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Explore my detailed technical guides and documentation on various IT infrastructure topics</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Linux Card -->
+        <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg card-hover">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="relative p-6 z-10">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fab fa-linux text-3xl text-blue-600 group-hover:text-white transition"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-white transition">Linux Administration</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full group-hover:bg-blue-200">SSH</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full group-hover:bg-blue-200">DNS</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full group-hover:bg-blue-200">LEMP</span>
+            </div>
+            <a href="https://sites.google.com/view/portobahrul/documentation/sistem-os-linux" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 group-hover:text-white font-medium">
+              View Documentation
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        <!-- MikroTik Card -->
+        <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg card-hover">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-teal-600 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="relative p-6 z-10">
+            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-network-wired text-3xl text-green-600 group-hover:text-white transition"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-white transition">MikroTik Networking</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full group-hover:bg-green-200">Routing</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full group-hover:bg-green-200">Firewall</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full group-hover:bg-green-200">QoS</span>
+            </div>
+            <a href="https://sites.google.com/view/portobahrul/documentation/mikrotik-winbox" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 group-hover:text-white font-medium">
+              View Documentation
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Cloud Card -->
+        <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg card-hover">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="relative p-6 z-10">
+            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-cloud text-3xl text-purple-600 group-hover:text-white transition"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-white transition">Cloud Infrastructure</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full group-hover:bg-purple-200">AWS</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full group-hover:bg-purple-200">VPS</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full group-hover:bg-purple-200">MariaDB</span>
+            </div>
+            <a href="https://sites.google.com/view/portobahrul/documentation/cloud-computing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 group-hover:text-white font-medium">
+              View Documentation
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Network Lab Card -->
+        <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-lg card-hover">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-600 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div class="relative p-6 z-10">
+            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+              <i class="fas fa-server text-3xl text-orange-600 group-hover:text-white transition"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-white transition">Network Labs</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full group-hover:bg-orange-200">PNET</span>
+              <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full group-hover:bg-orange-200">DMZ</span>
+              <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full group-hover:bg-orange-200">Simulation</span>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1DYSK1oxoyU_W1V4f8oQhxzkCI0lkEQVk?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange-600 group-hover:text-white font-medium">
+              View Documentation
+              <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-16">
+        <a href="https://sites.google.com/view/portobahrul/documentation" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition">
+          <i class="fas fa-book-open mr-2"></i>
+          View All Documentation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="px-6 md:px-20 py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">Certifications</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- MTCNA Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-certificate text-5xl text-yellow-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-1">MikroTik Certified Network Associate</h3>
+          <p class="text-gray-600 text-sm mb-4">MikroTik • 2024</p>
+          <a href="Sertifikat MTCNA.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+        <!-- Network Essentials Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-certificate text-5xl text-blue-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-1">Network Essentials</h3>
+          <p class="text-gray-600 text-sm mb-4">Cisco • 2023</p>
+          <a href="Network Essentials.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+        <!-- BSSN Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-certificate text-5xl text-green-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-1">Cyber Security Awareness</h3>
+          <p class="text-gray-600 text-sm mb-4">BSSN • 2023</p>
+          <a href="Muhamad Bahrul Widad Sauqi_sign_bssn1.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+        <!-- Networking Basics Card -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 card-hover">
+          <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fas fa-certificate text-5xl text-red-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg mb-1">Networking Basics</h3>
+          <p class="text-gray-600 text-sm mb-4">Cisco • 2023</p>
+          <a href="Networking_Basics_Badge20250110-28-shpc6v.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm flex items-center">
+            View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="https://sites.google.com/view/portobahrul/certificate" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition">
+          View all certificates
+          <i class="fas fa-arrow-right ml-2 text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 md:px-20 py-20 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-12">
+        <div class="w-10 h-1 bg-blue-600"></div>
+        <h2 class="text-3xl font-bold">Get In Touch</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <p class="font-medium">Email</p>
+                <a href="mailto:muhamadbahrulwidadsauqi13@gmail.com" class="text-gray-600 hover:text-blue-600 transition">muhamadbahrulwidadsauqi13@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <p class="font-medium">Phone</p>
+                <a href="tel:+6281383285313" class="text-gray-600 hover:text-blue-600 transition">+62 813 8328 5313</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div>
+                <p class="font-medium">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/muhamadbahrulwidadsauqi/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition">linkedin.com/in/muhamadbahrulwidadsauqi</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <p class="font-medium">Instagram</p>
+                <a href="https://www.instagram.com/drullwd" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-pink-600 transition">@drullwd</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+          <form action="https://formspree.io/f/xpwdnzar" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2 font-medium">Full Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+              <label for="email" class="block mb-2 font-medium">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+              <label for="subject" class="block mb-2 font-medium">Subject</label>
+              <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+              <label for="message" class="block mb-2 font-medium">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            </div>
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md">
+              <i class="fas fa-paper-plane mr-2"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 md:px-20">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 gradient-text tech-font">Bahrul<span class="text-blue-400">.dev</span></h3>
+          <p class="text-gray-400">Network Engineer & IT Support passionate about building reliable infrastructure.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">Profile</a></li>
+            <li><a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a></li>
+            <li><a href="#documentation" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+            <li><a href="#certifications" class="text-gray-400 hover:text-white transition">Certifications</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-4">Connect</h4>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/in/muhamadbahrulwidadsauqi/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/bahrulwd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/drullwd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>&copy; 2024 Muhamad Bahrul Widad Sauqi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language toggle functionality
+    const languageToggle = document.getElementById('languageToggle');
+    const enContents = document.querySelectorAll('.en-content');
+    const idContents = document.querySelectorAll('.id-content');
+
+    const toggleLang = () => {
+      languageToggle.classList.toggle('active');
+      const active = languageToggle.classList.contains('active');
+      languageToggle.setAttribute('aria-checked', active ? 'true' : 'false');
+      enContents.forEach(c => c.classList.toggle('hidden'));
+      idContents.forEach(c => c.classList.toggle('hidden'));
+    };
+
+    languageToggle.addEventListener('click', toggleLang);
+    languageToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleLang(); }
+    });
+
+    // Smooth scrolling for anchor links (accounts for header height)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const header = document.querySelector('header');
+          const offset = header ? header.offsetHeight : 80;
+          const top = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
